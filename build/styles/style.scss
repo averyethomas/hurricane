@@ -1,0 +1,84 @@
+@import "base-files/base";
+
+//SECTION STYLES
+
+.section{
+  margin: 0 0 4rem;
+  .container{
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  &.hero{
+    background: #cecece;
+    height: 90vh;
+    margin: 0 0 5rem;
+
+    .container{
+      .text{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1, h2, p{
+          color: $white;
+        }
+      }
+    }
+  }
+  &.content{
+    overflow: hidden;
+    .graphic{
+      margin: 3rem 0 4rem;
+
+      .full{
+        background: #cecece;
+        padding-bottom: 56.25%;
+        width: 100%;
+        display: block;
+      }
+      .caption{
+        margin: 0.5rem 0;
+
+        p{
+          max-width: 100%;
+          margin: 0;
+          font-weight: 300;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .aside{
+      background-color: #cecece;
+      display: block;
+      padding-bottom: 25%;
+      width: 100%;
+      max-width: 300px;
+      margin: 3rem auto 4rem;
+
+      &.left{
+        @media all and (min-width: 768px){
+          margin: 1rem 4rem 2rem 0;
+          float: left;
+        }
+      }
+
+      &.right{
+        @media all and (min-width: 768px){
+          margin: 1rem 0 2rem 4rem;
+          float: right;
+        }
+      }
+    }
+    .about{
+      border: 1px solid $primary;
+      max-width: 630px;
+      margin: 0 auto;
+      padding: 1rem 1rem 0;
+    }
+  }
+}

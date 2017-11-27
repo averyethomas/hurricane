@@ -1,0 +1,61 @@
+@import "base-files/reset";
+
+//COLORS
+
+$primary: #000000;
+$secondary: #000000;
+$highlight: #000000;
+$black: #000000;
+$white: #ffffff;
+
+//TYPOGRAPHY
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+$sans-serif: 'Roboto', sans-serif;
+
+html{ font-size: 10px; }
+
+h1, h2, h3, h4, h5, h6, p, a, small{
+  font-family: $sans-serif;
+  color: $primary;
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  letter-spacing: 0.25rem;
+}
+h2{
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+h3{
+  font-size: 3rem;
+  margin: 0 0 3rem;
+  text-align: center;
+
+  &:after{
+    content: '';
+    display: block;
+    width: 8rem;
+    height: 3px;
+    margin: 1rem auto 0;
+    background-color: $secondary;
+  }
+}
+h6{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+}
