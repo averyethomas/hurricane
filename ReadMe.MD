@@ -1,1 +1,1 @@
-# Hurricane Season Article`
+# Hurricane Season Article
