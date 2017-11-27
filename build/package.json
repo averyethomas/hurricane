@@ -1,7 +1,7 @@
 {
-  "name": "Project Start",
+  "name": "WP-Start",
   "version": "1.0.0",
-  "description": "A quick way to get a project started and compile for deployment.",
+  "description": "A quick way to get started with a custom wordpress theme.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

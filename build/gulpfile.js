@@ -16,6 +16,7 @@ var gulp =      require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 var staticFolder = 'static';
+var themeFolder = 'wp-theme';
 
 //Compiles .pug files into .html files at the root level.
 gulp.task('html', function(){
@@ -46,9 +47,9 @@ gulp.task('scripts', function(){
 
 //Compiles image files (.jpg, .jpeg, .png, .gif, .svg) into the Images folder inside of the Assets folder.
 gulp.task('images', function(){
-    return gulp.src('images/**/*.{jpg,jpeg,png,gif,svg,pdf}')
+    return gulp.src('images/**/*.{jpg,jpeg,png,gif,svg}')
         .pipe(gmin())
-        .pipe(gulp.dest('../' + staticFolder + '/assets/images/'))
+        .pipe(gulp.dest('../' + staticFolder + '/assets/images'))
         .pipe(connect.reload());
 });
 
@@ -73,6 +74,7 @@ gulp.task('default', ['server'], function(){
     gulp.watch('styles/**/*.scss', ['styles']);
     gulp.watch('scripts/*.js', ['scripts']);
     gulp.watch('images/**/*', ['images']);
+    gulp.watch('images/**/*', ['svg']);
 });
 
 gulp.task('deploy', function(){

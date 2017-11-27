@@ -12,7 +12,7 @@
   }
   &.hero{
     background: #cecece;
-    height: 90vh;
+    height: 99vh;
     margin: 0 0 5rem;
 
     .container{
@@ -32,7 +32,24 @@
   &.content{
     overflow: hidden;
     .graphic{
-      margin: 3rem 0 4rem;
+      margin: 3rem auto 4rem;
+      width: 100%;
+
+      &.left{
+        @media all and (min-width: 768px){
+          margin: 1rem 2rem 1rem 0;
+          float: left;
+          max-width: 300px;
+        }
+      }
+
+      &.right{
+        @media all and (min-width: 768px){
+          margin: 1rem 0 1rem 2rem;
+          float: right;
+          max-width: 300px;
+        }
+      }
 
       .full{
         background: #cecece;
@@ -40,43 +57,43 @@
         width: 100%;
         display: block;
       }
+      .aside{
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .graph{
+        .highcharts-root{
+          font-family: $sans-serif!important;
+        }
+        .highcharts-credits{
+          display: none;
+        }
+      }
       .caption{
-        margin: 0.5rem 0;
+        margin: 0.75rem 0;
+        padding: 0.5rem 0 0;
+        border-top: 2px solid $dark;
 
         p{
           max-width: 100%;
           margin: 0;
           font-weight: 300;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
+          line-height: 1.7rem;
           text-transform: uppercase;
-        }
-      }
-    }
-    .aside{
-      background-color: #cecece;
-      display: block;
-      padding-bottom: 25%;
-      width: 100%;
-      max-width: 300px;
-      margin: 3rem auto 4rem;
 
-      &.left{
-        @media all and (min-width: 768px){
-          margin: 1rem 4rem 2rem 0;
-          float: left;
-        }
-      }
-
-      &.right{
-        @media all and (min-width: 768px){
-          margin: 1rem 0 2rem 4rem;
-          float: right;
+          .fa{
+            margin: 0 0.5rem 0.5rem 0;
+          }
         }
       }
     }
     .about{
-      border: 1px solid $primary;
-      max-width: 630px;
+      border: 1px solid $dark;
+      max-width: 675px;
       margin: 0 auto;
       padding: 1rem 1rem 0;
     }
