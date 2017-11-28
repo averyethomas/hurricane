@@ -65,8 +65,6 @@ app.controller('namedStormCtrl', ['$scope', function ($scope) {
         series: $scope.seriesData
     });
 
-    console.log('test');
-
 }]);
 
 app.controller('mapCtrl', ['$scope', function($scope){
@@ -145,7 +143,7 @@ app.controller('costsCtrl', ['$scope', function($scope){
             categories: $scope.years,
             crosshair: true
         }],
-        yAxis: [{ // Primary yAxis
+        yAxis: [{
             labels: {
                 format: '${value} B',
                 style: {
@@ -158,7 +156,7 @@ app.controller('costsCtrl', ['$scope', function($scope){
                     color: '#153959'
                 }
             }
-        }, { // Secondary yAxis
+        }, {
             title: {
                 text: 'Number of Storms',
                 style: {
@@ -174,7 +172,38 @@ app.controller('costsCtrl', ['$scope', function($scope){
             opposite: true
         }],
         tooltip: {
-            shared: true
+            shared: true,
+            formatter: function () {
+                var points = this.points;
+                var pointsLength = points.length;
+                var tooltipMarkup = pointsLength ? '<span style="font-size: 10px">' + points[0].key + '</span><br/>' : '';
+                $scope.year = this.x;
+                $scope.storms = points[0];
+                $scope.costs = points[1];
+                $scope.stormsList = [];
+
+                angular.forEach($scope.data, function(value){
+                    if($scope.year == value.year){
+                        $scope.stormsList.push(value.eventNames);
+                    }
+                });
+
+                tooltipMarkup += '<span style="color:' +$scope.storms.series.color + '">\u25CF</span> ' + $scope.storms.series.name + ': <b>' + $scope.storms.y  + '</b><br/>';
+                tooltipMarkup += '<span style="color:' + $scope.costs.series.color + '">\u25CF</span> ' + $scope.costs.series.name + ': <b> $' + $scope.costs.y  + ' B</b><br/>';
+
+                if( $scope.stormsList[0].length > 1 ){
+                    tooltipMarkup += 'Storms:<br />';
+                    angular.forEach($scope.stormsList[0], function(value){
+                        tooltipMarkup += value + '<br />';
+                    });
+                }
+                else if( $scope.stormsList[0].length == 1  ){
+                    tooltipMarkup += 'Storm:<br />';
+                    tooltipMarkup += $scope.stormsList[0];
+                }
+
+                return tooltipMarkup;
+            }
         },
         legend: {
             layout: 'vertical',
