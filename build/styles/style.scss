@@ -5,6 +5,7 @@
 .section{
   margin: 0 0 4rem;
   .container{
+    width: 100%;
     max-width: 992px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -16,7 +17,10 @@
     margin: 0 0 5rem;
 
     .container{
+      height: 100%;
+
       .text{
+        width: 85%;
         text-align: center;
         position: absolute;
         top: 50%;
@@ -52,8 +56,6 @@
       }
 
       .full{
-        background: #cecece;
-        padding-bottom: 56.25%;
         width: 100%;
         display: block;
       }
