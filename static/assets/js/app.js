@@ -1,5 +1,32 @@
 var app = angular.module('angularApp', []);
 
+app.controller('2017stormCtrl', ['$scope', function ($scope){
+    $scope.source = 'http://weather.unisys.com/hurricane/atlantic/2017/index.php';
+    $scope.stormsList = [
+        {
+            storm: 'Arlene',
+            startDate: '04-19-2017',
+            endDate: '04-21-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    time: '04/19/12Z',
+                    lat: 31.90,
+                    long: -40.90,
+                    wind: 30
+                },
+                {
+                    time: '04/19/12Z',
+                    lat: 31.90,
+                    long: -40.90,
+                    wind: 30
+                }
+            ]
+        }
+    ];
+
+}]);
+
 app.controller('namedStormCtrl', ['$scope', function ($scope) {
 
     $scope.namedStormsByYear = [
