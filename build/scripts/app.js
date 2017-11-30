@@ -1686,7 +1686,7 @@ app.controller('namedStormCtrl', ['$scope', function ($scope) {
         { year: 2014, total: 8, major: 2 },
         { year: 2015, total: 11, major: 2 },
         { year: 2016, total: 15, major: 4 },
-        { year: 2017, total: 16, major: 6 }
+        { year: 2017, total: 17, major: 6 }
     ];
 
     $scope.years = [];
