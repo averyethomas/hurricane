@@ -4,11 +4,10 @@ html
       meta(name="viewport" content="width=device-width, initial-scale=1")
       //STYLES
       link(href="style.css", rel="stylesheet", type="text/css")
-      //HIGHCHART
-      script(src='https://code.highcharts.com/highcharts.js' type='text/javascript')
       //JAVASCRIPT
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript")
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" type="text/javascript")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js", type="text/javascript")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js", type="text/javascript")
+      script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-resource.min.js?ver=1.0")
       script(src="assets/js/app.js" type="text/javascript")
       //FONT AWESOME
       script(src="https://use.fontawesome.com/879fcc8444.js")
@@ -23,8 +22,8 @@ html
          div.container
             h3 INTRO
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            div.graphic
-               div.full
+            div.graphic(data-ng-controller="2017stormCtrl")
+               div.full#stormMap
                div.caption
                   p <i class="fa fa-globe" aria-hidden="true"></i> An interactive map of all of the hurricanes in the Atlantic for 2017 | DATA ATTRIBUTION
             div.graphic.right(data-ng-controller='namedStormCtrl')
@@ -96,3 +95,7 @@ html
             div.about
                h6 About This Story
                p Story by <a href="http://averyethomas.com" target="_blank">Avery Thomas</a>, Animation by <a href="http://austin-thomas.com" target="_blank">Austin Thomas</a>, Data from <a href='http://www.nhc.noaa.gov/data' target='_blank'>National Hurricane Center</a>.
+      <script> </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMFwELhIzYsoRFQbX143HdGA2G4ZKENY4&callback=initMap" async defer></script>
+      //HIGHCHART
+      script(src='https://code.highcharts.com/highcharts.js' type='text/javascript')

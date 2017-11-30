@@ -1,6 +1,6 @@
 var app = angular.module('angularApp', []);
 
-app.controller('2017stormCtrl', ['$scope', function ($scope){
+app.controller('2017stormCtrl', ['$scope', '$window', '$timeout', function ($scope, $window, $timeout){
     $scope.source = 'http://weather.unisys.com/hurricane/atlantic/2017/index.php';
     $scope.stormsList = [
         {
@@ -12,18 +12,1364 @@ app.controller('2017stormCtrl', ['$scope', function ($scope){
                 {
                     time: '04/19/12Z',
                     lat: 31.90,
-                    long: -40.90,
+                    lng: -40.90,
                     wind: 30
                 },
                 {
-                    time: '04/19/12Z',
-                    lat: 31.90,
-                    long: -40.90,
+                    time: '04/19/18Z',
+                    lat: 32.40,
+                    lng: -40.00,
                     wind: 30
+                },
+                {
+                    time: '04/20/00Z',
+                    lat: 33.20,
+                    lng: -39.30,
+                    wind: 30
+                },
+                {
+                    time: '04/20/06Z',
+                    lat: 34.40,
+                    lng: -39.30,
+                    wind: 30
+                },
+                {
+                    time: '04/20/12Z',
+                    lat: 36.10,
+                    lng: -40.00,
+                    wind: 30
+                },
+                {
+                    time: '04/20/18Z',
+                    lat: 37.70,
+                    lng: -42.00,
+                    wind: 40
+                },
+                {
+                    time: '04/21/00Z',
+                    lat: 39.40,
+                    lng: -44.20,
+                    wind: 45
+                },
+                {
+                    time: '04/21/06Z',
+                    lat: 40.00,
+                    lng: -48.00,
+                    wind: 45
+                }
+            ]
+        },
+        {
+            storm: 'Bret',
+            startDate: '06-19-2017',
+            endDate: '06-20-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    time: '06/19/18Z',
+                    lat: 9.40,
+                    lng: -59.80,
+                    wind: 35
+                },
+                {
+                    time: '06/20/00Z',
+                    lat: 10.00,
+                    lng: -61.30,
+                    wind: 35
+                },
+                {
+                    time: '06/20/06Z',
+                    lat: 10.60,
+                    lng: -62.90,
+                    wind: 35
+                },
+                {
+                    time: '06/20/12Z',
+                    lat: 11.60,
+                    lng:  -64.40,
+                    wind: 40
+                }
+            ]
+        },
+        {
+            storm: 'Cindy',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Don',
+            startDate: '07-17-2017',
+            endDate: '07-18-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 11.20,
+                    lng: -52.60,
+                    wind: 35
+                },
+                {
+                    lat: 11.30,
+                    lng: -54.00,
+                    wind: 40
+                },
+                {
+                    lat: 11.50,
+                    lng: -56.20,
+                    wind: 45
+                },
+                {
+                    lat: 11.50,
+                    lng:  -58.00,
+                    wind: 35
+                },
+                {
+                    lat: 11.70,
+                    lng: -60.00,
+                    wind: 35
+                }
+            ]
+        },
+        {
+            storm: 'Emily',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 26,
+                    lng: 50,
+                    wind: 40
+                }
+            ]
+        },
+        {
+            storm: 'Franklin',
+            startDate: '08-07-2017',
+            endDate: '08-10-2017',
+            class: 'Hurricane',
+            locations: [
+                {
+                    lat: 16.40,
+                    lng: -83.00,
+                    wind: 35
+                },
+                {
+                    lat: 17.10,
+                    lng: -84.20,
+                    wind: 40
+                },
+                {
+                    lat: 17.70,
+                    lng: -85.10,
+                    wind: 50
+                },
+                {
+                    lat: 18.60,
+                    lng:  -85.90,
+                    wind: 50
+                },
+                {
+                    lat: 19.10,
+                    lng: -87.30,
+                    wind: 50
+                },
+                {
+                    lat:  19.30,
+                    lng: -88.50,
+                    wind: 45
+                },
+                {
+                    lat:  19.60,
+                    lng: -89.60,
+                    wind: 40
+                },
+                {
+                    lat: 20.20,
+                    lng: -90.30,
+                    wind: 35
+                },
+                {
+                    lat: 20.30,
+                    lng: -91.30,
+                    wind: 45
+                },
+                {
+                    lat: 20.40,
+                    lng: -92.70,
+                    wind: 55
+                },
+                {
+                    lat: 20.20,
+                    lng: -93.90,
+                    wind: 60
+                },
+                {
+                    lat: 20.10,
+                    lng: -94.90,
+                    wind: 65
+                },
+                {
+                    lat: 20.200,
+                    lng:  -96.10,
+                    wind: 75
+                },
+                {
+                    lat: 20.200,
+                    lng:  -96.10,
+                    wind: 60
+                }
+            ]
+        },
+        {
+            storm: 'Gert',
+            startDate: '08-13-2017',
+            endDate: '08-17-2017',
+            class: 'Hurricane',
+            locations: [
+                {
+                    lat: 25.30,
+                    lng: -70.30,
+                    wind: 30
+                },
+                {
+                    lat: 26.50,
+                    lng: -70.90,
+                    wind: 30
+                },
+                {
+                    lat: 27.40,
+                    lng: -71.50,
+                    wind: 30
+                },
+                {
+                    lat: 28.10,
+                    lng:  -71.70,
+                    wind: 35
+                },
+                {
+                    lat: 28.80,
+                    lng: -71.90,
+                    wind: 40
+                },
+                {
+                    lat:  29.70,
+                    lng: -72.20,
+                    wind: 40
+                },
+                {
+                    lat: 30.30,
+                    lng: -72.20,
+                    wind: 50
+                },
+                {
+                    lat: 30.60,
+                    lng: -72.30,
+                    wind: 60
+                },
+                {
+                    lat: 31.20,
+                    lng: -72.30,
+                    wind: 65
+                },
+                {
+                    lat: 31.80,
+                    lng: -72.50,
+                    wind: 65
+                },
+                {
+                    lat: 32.80,
+                    lng: -72.00,
+                    wind: 65
+                },
+                {
+                    lat: 33.70,
+                    lng:  -71.20,
+                    wind: 70
+                },
+                {
+                    lat: 34.80,
+                    lng:  -70.30,
+                    wind: 75
+                },
+                {
+                    lat: 36.00,
+                    lng:  -68.40,
+                    wind: 80
+                },
+                {
+                    lat: 37.40,
+                    lng:  -65.70,
+                    wind: 80
+                },
+                {
+                    lat: 38.70,
+                    lng: -62.40,
+                    wind: 85
+                },
+                {
+                    lat: 40.10,
+                    lng: -58.40,
+                    wind: 90
+                },
+                {
+                    lat: 41.70,
+                    lng: -54.0,
+                    wind: 85
+                },
+                {
+                    lat: 43.20,
+                    lng: -50.0,
+                    wind: 70
+                }
+            ]
+        },
+        {
+            storm: 'Harvey',
+            startDate: '08-17-2017',
+            endDate: '09-01-2017',
+            class: 'Hurricane',
+            locations: [
+                {
+                    lat: 13.00,
+                    lng: -55.80,
+                    wind: 35
+                },
+                {
+                    lat: 13.00,
+                    lng: -57.40,
+                    wind: 35
+                },
+                {
+                    lat: 13.10,
+                    lng: -59.10,
+                    wind: 35
+                },
+                {
+                    lat: 13.10,
+                    lng:  -61.30,
+                    wind: 35
+                },
+                {
+                    lat: 13.40,
+                    lng: -62.90,
+                    wind: 35
+                },
+                {
+                    lat:  13.70,
+                    lng: -64.10,
+                    wind: 35
+                },
+                {
+                    lat: 13.80,
+                    lng: -65.90,
+                    wind: 35
+                },
+                {
+                    lat: 13.90,
+                    lng: -68.10,
+                    wind: 35
+                },
+                {
+                    lat: 14.10,
+                    lng: -70.00,
+                    wind: 30
+                },
+                {
+                    lat: 21.50,
+                    lng: -92.50,
+                    wind: 30
+                },
+                {
+                    lat: 21.60,
+                    lng: -92.60,
+                    wind: 30
+                },
+                {
+                    lat: 21.90,
+                    lng: -92.60,
+                    wind: 30
+                },
+                {
+                    lat: 21.50,
+                    lng: -92.50,
+                    wind: 30
+                },
+                {
+                    lat: 21.60,
+                    lng: -92.60,
+                    wind: 30
+                },
+                {
+                    lat: 21.90,
+                    lng: -92.60,
+                    wind: 30
+                },
+                {
+                    lat: 23.20,
+                    lng: -92.80,
+                    wind: 40
+                },
+                {
+                    lat: 24.00,
+                    lng: -93.30,
+                    wind: 55
+                },
+                {
+                    lat: 24.40,
+                    lng: -93.60,
+                    wind: 75
+                },
+                {
+                    lat: 25.20,
+                    lng: -94.60,
+                    wind: 75
+                },
+                {
+                    lat: 25.90,
+                    lng: -95.40,
+                    wind: 90
+                },
+                {
+                    lat: 26.70,
+                    lng: -96.00,
+                    wind: 95
+                },
+                {
+                    lat: 27.50,
+                    lng: -96.50,
+                    wind: 110
+                },
+                {
+                    lat: 28.00,
+                    lng: -97.00,
+                    wind: 115
+                },
+                {
+                    lat: 28.50,
+                    lng: -97.20,
+                    wind: 85
+                },
+                {
+                    lat: 28.90,
+                    lng: -97.30,
+                    wind: 65
+                },
+                {
+                    lat: 29.10,
+                    lng: -97.60,
+                    wind: 55
+                },
+                {
+                    lat: 29.30,
+                    lng: -97.30,
+                    wind: 45
+                },
+                {
+                    lat: 29.20,
+                    lng: -97.70,
+                    wind: 40
+                },
+                {
+                    lat: 29.00,
+                    lng: -97.40,
+                    wind: 35
+                },
+                {
+                    lat: 29.00,
+                    lng: -97.00,
+                    wind: 35
+                },
+                {
+                    lat: 28.80,
+                    lng: -96.60,
+                    wind: 35
+                },
+                {
+                    lat: 28.60,
+                    lng: -96.30,
+                    wind: 35
+                },
+                {
+                    lat: 28.50,
+                    lng: -96.00,
+                    wind: 35
+                },
+                {
+                    lat: 28.50,
+                    lng: -95.70,
+                    wind: 40
+                },
+                {
+                    lat: 28.20,
+                    lng: -95.30,
+                    wind: 40
+                },
+                {
+                    lat: 28.10,
+                    lng: -94.80,
+                    wind: 40
+                },
+                {
+                    lat: 28.40,
+                    lng: -94.30,
+                    wind: 40
+                },
+                {
+                    lat: 29.20,
+                    lng: -94.30,
+                    wind: 45
+                },
+                {
+                    lat: 29.00,
+                    lng: -93.60,
+                    wind: 45
+                },
+                {
+                    lat: 29.80,
+                    lng: -93.40,
+                    wind: 40
+                },
+                {
+                    lat: 30.50,
+                    lng: -93.30,
+                    wind: 40
+                },
+                {
+                    lat: 30.80,
+                    lng: -93.10,
+                    wind: 35
+                },
+                {
+                    lat: 31.70,
+                    lng: -92.30,
+                    wind: 30
+                },
+                {
+                    lat: 32.30,
+                    lng: -92.00,
+                    wind: 25
+                },
+                {
+                    lat: 32.50,
+                    lng: -91.40,
+                    wind: 15
+                },
+                {
+                    lat: 33.80,
+                    lng: -90.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.30,
+                    lng: -89.00,
+                    wind: 25
+                },
+                {
+                    lat: 35.70,
+                    lng: -87.20,
+                    wind: 25
+                }
+            ]
+        },
+        //TO CHANGE
+        {
+            storm: 'Irma',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Jose',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Katia',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Lee',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Maria',
+            startDate: '06-20-2017',
+            endDate: '06-23-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 25.70,
+                    lng: -90.60,
+                    wind: 40
+                },
+                {
+                    lat: 26.40,
+                    lng: -91.00,
+                    wind: 50
+                },
+                {
+                    lat: 27.30,
+                    lng: -91.90,
+                    wind: 50
+                },
+                {
+                    lat: 27.60,
+                    lng:  -92.60,
+                    wind: 45
+                },
+                {
+                    lat: 28.20,
+                    lng: -93.20,
+                    wind: 45
+                },
+                {
+                    lat:  28.60,
+                    lng: -93.40,
+                    wind: 45
+                },
+                {
+                    lat: 29.90,
+                    lng: -93.60,
+                    wind: 35
+                },
+                {
+                    lat: 31.00,
+                    lng: -93.50,
+                    wind: 30
+                },
+                {
+                    lat: 31.90,
+                    lng: -93.70,
+                    wind: 20
+                },
+                {
+                    lat: 33.10,
+                    lng: -93.50,
+                    wind: 15
+                },
+                {
+                    lat: 34.50,
+                    lng: -92.00,
+                    wind: 15
+                },
+                {
+                    lat: 36.10,
+                    lng:  -89.60,
+                    wind: 30
+                }
+            ]
+        },
+        //END TO CHANGE
+        {
+            storm: 'Nate',
+            startDate: '10-04-2017',
+            endDate: '10-09-2017',
+            class: 'Hurricane',
+            locations: [
+                {
+                    lat: 12.20,
+                    lng: -81.90,
+                    wind: 30
+                },
+                {
+                    lat: 12.50,
+                    lng: -82.50,
+                    wind: 30
+                },
+                {
+                    lat: 12.80,
+                    lng: -82.70,
+                    wind: 30
+                },
+                {
+                    lat: 13.30,
+                    lng:  -83.30,
+                    wind: 30
+                },
+                {
+                    lat: 14.30,
+                    lng: -83.70,
+                    wind: 35
+                },
+                {
+                    lat:  14.90,
+                    lng: -84.30,
+                    wind: 35
+                },
+                {
+                    lat: 15.80,
+                    lng: -84.70,
+                    wind: 35
+                },
+                {
+                    lat: 16.90,
+                    lng: -85.10,
+                    wind: 40
+                },
+                {
+                    lat: 18.70,
+                    lng: -85.00,
+                    wind: 45
+                },
+                {
+                    lat: 20.30,
+                    lng: -85.70,
+                    wind: 50
+                },
+                {
+                    lat: 22.30,
+                    lng: -86.40,
+                    wind: 60
+                },
+                {
+                    lat:  24.50,
+                    lng:  -87.00,
+                    wind: 70
+                },
+                {
+                    lat:  26.60,
+                    lng:  -88.40,
+                    wind: 80
+                },
+                {
+                    lat:  28.40,
+                    lng:  -89.10,
+                    wind: 80
+                },
+                {
+                    lat:  29.90,
+                    lng:  -89.10,
+                    wind: 75
+                },
+                {
+                    lat:  31.50,
+                    lng:  -88.40,
+                    wind: 60
+                },
+                {
+                    lat:  33.10,
+                    lng:  -87.30,
+                    wind: 30
+                },
+                {
+                    lat:  35.00,
+                    lng:  -86.50,
+                    wind: 30
+                },
+                {
+                    lat:  36.40,
+                    lng:  -85.50,
+                    wind: 30
+                }
+            ]
+        },
+        {
+            storm: 'Ophelia',
+            startDate: '10-09-2017',
+            endDate: '10-15-2017',
+            class: 'Hurricane',
+            locations: [
+                {
+                    lat: 31.10,
+                    lng: -39.90,
+                    wind: 30
+                },
+                {
+                    lat: 31.40,
+                    lng: -39.90,
+                    wind: 35
+                },
+                {
+                    lat: 31.50,
+                    lng: -39.60,
+                    wind: 40
+                },
+                {
+                    lat: 32.30,
+                    lng:  -39.00,
+                    wind: 45
+                },
+                {
+                    lat: 31.90,
+                    lng: -38.80,
+                    wind: 45
+                },
+                {
+                    lat:  31.50,
+                    lng: -38.30,
+                    wind: 45
+                },
+                {
+                    lat: 31.10,
+                    lng: -38.00,
+                    wind: 50
+                },
+                {
+                    lat: 30.70,
+                    lng: -37.60,
+                    wind: 45
+                },
+                {
+                    lat: 30.20,
+                    lng: -37.00,
+                    wind: 55
+                },
+                {
+                    lat: 30.00,
+                    lng: -36.50,
+                    wind: 60
+                },
+                {
+                    lat: 30.00,
+                    lng: -36.10,
+                    wind: 65
+                },
+                {
+                    lat:  30.00,
+                    lng:  -35.70,
+                    wind: 75
+                },
+                {
+                    lat:  30.30,
+                    lng:  -35.60,
+                    wind: 75
+                },
+                {
+                    lat:  30.50,
+                    lng:  -35.60,
+                    wind: 80
+                },
+                {
+                    lat:  30.40,
+                    lng:  -35.50,
+                    wind: 85
+                },
+                {
+                    lat:  30.70,
+                    lng:  -34.70,
+                    wind: 90
+                },
+                {
+                    lat:  31.10,
+                    lng:  -33.90,
+                    wind: 90
+                },
+                {
+                    lat:  31.80,
+                    lng:  -32.90,
+                    wind: 85
+                },
+                {
+                    lat:  32.30,
+                    lng:  -31.80,
+                    wind: 85
+                },
+                {
+                    lat:  33.00,
+                    lng:  -30.60,
+                    wind: 85
+                },
+                {
+                    lat:  33.90,
+                    lng:  -28.60,
+                    wind: 85
+                },
+                {
+                    lat:  34.80,
+                    lng:  -26.60,
+                    wind: 100
+                },
+                {
+                    lat:  35.90,
+                    lng:  -23.70,
+                    wind: 100
+                },
+                {
+                    lat:  37.30,
+                    lng:  -21.50,
+                    wind: 100
+                },
+                {
+                    lat:  39.00,
+                    lng:  -18.30,
+                    wind: 90
+                },
+                {
+                    lat:  41.60,
+                    lng:  -16.00,
+                    wind: 80
+                },
+                {
+                    lat:  44.60,
+                    lng:  -13.30,
+                    wind: 75
+                }
+            ]
+        },
+        {
+            storm: 'Philippe',
+            startDate: '10-28-2017',
+            endDate: '10-29-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 20.80,
+                    lng: -82.90,
+                    wind: 30
+                },
+                {
+                    lat: 23.00,
+                    lng: -82.60,
+                    wind: 35
+                },
+                {
+                    lat: 24.80,
+                    lng: -82.10,
+                    wind: 35
+                },
+                {
+                    lat: 25.00,
+                    lng:  -81.00,
+                    wind: 40
+                },
+                {
+                    lat: 27.80,
+                    lng: -77.50,
+                    wind: 45
+                }
+            ]
+        },
+        {
+            storm: 'Rina',
+            startDate: '11-06-2017',
+            endDate: '11-09-2017',
+            class: 'Tropical Storm',
+            locations: [
+                {
+                    lat: 28.90,
+                    lng: -50.20,
+                    wind: 30
+                },
+                {
+                    lat: 29.50,
+                    lng: -50.40,
+                    wind: 30
+                },
+                {
+                    lat: 29.90,
+                    lng: -50.00,
+                    wind: 30
+                },
+                {
+                    lat: 30.40,
+                    lng:  -49.90,
+                    wind: 35
+                },
+                {
+                    lat: 31.40,
+                    lng: -49.80,
+                    wind: 35
+                },
+                {
+                    lat:  32.40,
+                    lng: -49.30,
+                    wind: 35
+                },
+                {
+                    lat: 33.80,
+                    lng: -48.90,
+                    wind: 40
+                },
+                {
+                    lat: 35.40,
+                    lng: -48.50,
+                    wind: 45
+                },
+                {
+                    lat: 37.10,
+                    lng: -48.40,
+                    wind: 50
+                },
+                {
+                    lat: 39.40,
+                    lng: -48.70,
+                    wind: 50
+                },
+                {
+                    lat: 40.90,
+                    lng: -48.60,
+                    wind: 45
+                },
+                {
+                    lat: 42.50,
+                    lng:  -48.30,
+                    wind: 45
+                },
+                {
+                    lat: 44.50,
+                    lng:  -47.00,
+                    wind: 40
                 }
             ]
         }
     ];
+
+    $window.initMap = function(){
+
+        var map = new google.maps.Map(document.getElementById('stormMap'), {
+            zoom: 4,
+            center: {lat: 25, lng: -60},
+            mapTypeId: 'terrain'
+        });
+
+        //TODO: ADD MAP OPTIONS TO STYLE IT
+
+        angular.forEach($scope.stormsList, function(value){
+
+            var hurricanePathCoordinates = value.locations;
+
+            var hurricanePath = new google.maps.Polyline({
+                path: hurricanePathCoordinates,
+                geodesic: true,
+                strokeColor: 'rgba(0,0,0,0.5)',
+                strokeOpacity: 1.0,
+                strokeWeight: 3.75,
+                message: '<span style="font-weight: bold">' + value.class + ' ' + value.storm + '</span><br />' + value.startDate + ' - ' + value.endDate
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: ''
+            });
+
+            google.maps.event.addListener(hurricanePath, 'mouseover', function(event) {
+                infowindow.setContent(this.message);
+                infowindow.setPosition(event.latLng);
+                infowindow.open(map);
+            });
+            google.maps.event.addListener(hurricanePath, 'mouseout', function(event){
+                var closeInfoWindow = infowindow.close(map);
+                $timeout(closeInfoWindow, 1000);
+            });
+
+            hurricanePath.setMap(map);
+        });
+    };
 
 }]);
 

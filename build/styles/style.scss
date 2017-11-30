@@ -58,6 +58,10 @@
       .full{
         width: 100%;
         display: block;
+
+        &#stormMap{
+          height: 500px;
+        }
       }
       .aside{
         img{
