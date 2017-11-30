@@ -1641,7 +1641,7 @@ app.controller('2017stormCtrl', ['$scope', '$window', '$timeout', function ($sco
                 path: hurricanePathCoordinates,
                 geodesic: true,
                 strokeColor: '#556A73',
-                strokeOpacity: 0.75,
+                strokeOpacity: 0.5,
                 strokeWeight: 3.75,
                 message: '<span style="font-weight: bold">' + value.class + ' ' + value.storm + '</span><br />' + value.startDate + ' - ' + value.endDate
             });
@@ -1650,14 +1650,17 @@ app.controller('2017stormCtrl', ['$scope', '$window', '$timeout', function ($sco
                 content: ''
             });
 
+
             google.maps.event.addListener(hurricanePath, 'mouseover', function(event) {
+                this.setOptions({ strokeColor: '#517373', strokeOpacity: 1 });
                 infowindow.setContent(this.message);
                 infowindow.setPosition(event.latLng);
                 infowindow.open(map);
             });
             google.maps.event.addListener(hurricanePath, 'mouseout', function(event){
+                this.setOptions({ strokeColor: '#556A73', strokeOpacity:0.5 });
                 var closeInfoWindow = infowindow.close(map);
-                $timeout(closeInfoWindow, 1000);
+                $timeout(closeInfoWindow, 5000);
             });
             google.maps.event.addListener(hurricanePath, 'click', function(event) {
                 infowindow.setContent(this.message);
