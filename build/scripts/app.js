@@ -194,13 +194,18 @@ app.controller('2017stormCtrl', ['$scope', '$window', '$timeout', function ($sco
         },
         {
             storm: 'Emily',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
+            startDate: '07-31-2017',
+            endDate: '07-31-2017',
             class: 'Tropical Storm',
             locations: [
                 {
-                    lat: 26,
-                    lng: 50,
+                    lat: 27.70,
+                    lng: -83.50,
+                    wind: 30
+                },
+                {
+                    lat: 27.70,
+                    lng: -83.20,
                     wind: 40
                 }
             ]
@@ -634,348 +639,1221 @@ app.controller('2017stormCtrl', ['$scope', '$window', '$timeout', function ($sco
                 }
             ]
         },
-        //TO CHANGE
         {
             storm: 'Irma',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
-            class: 'Tropical Storm',
+            startDate: '08-30-2017',
+            endDate: '09-12-2017',
+            class: 'Hurricane',
             locations: [
                 {
-                    lat: 25.70,
-                    lng: -90.60,
-                    wind: 40
+                    lat: 16.40,
+                    lng: -30.30,
+                    wind: 45
                 },
                 {
-                    lat: 26.40,
-                    lng: -91.00,
+                    lat: 16.40,
+                    lng: -31.20,
                     wind: 50
                 },
                 {
-                    lat: 27.30,
-                    lng: -91.90,
-                    wind: 50
+                    lat: 16.40,
+                    lng: -32.20,
+                    wind: 55
                 },
                 {
-                    lat: 27.60,
-                    lng:  -92.60,
+                    lat: 16.50,
+                    lng:  -32.90,
+                    wind: 60
+                },
+                {
+                    lat: 16.90,
+                    lng: -33.80,
+                    wind: 85
+                },
+                {
+                    lat: 17.30,
+                    lng: -34.80,
+                    wind: 100
+                },
+                {
+                    lat: 17.80,
+                    lng: -35.60,
+                    wind: 100
+                },
+                {
+                    lat: 18.20,
+                    lng: -36.50,
+                    wind: 100
+                },
+                {
+                    lat: 18.50,
+                    lng: -37.80,
+                    wind: 95
+                },
+                {
+                    lat: 18.80,
+                    lng: -39.10,
+                    wind: 105
+                },
+                {
+                    lat: 19.10,
+                    lng: -40.50,
+                    wind: 100
+                },
+                {
+                    lat: 19.000,
+                    lng:  -41.80,
+                    wind: 95
+                },
+                {
+                    lat: 18.80,
+                    lng: -43.300,
+                    wind: 95
+                },
+                {
+                    lat: 18.50,
+                    lng: -44.60,
+                    wind: 95
+                },
+                {
+                    lat: 18.30,
+                    lng: -46.20,
+                    wind: 95
+                },
+                {
+                    lat: 18.00,
+                    lng:  -47.50,
+                    wind: 100
+                },
+                {
+                    lat: 17.70,
+                    lng: -48.40,
+                    wind: 100
+                },
+                {
+                    lat: 17.60,
+                    lng: -49.80,
+                    wind: 100
+                },
+                {
+                    lat: 17.20,
+                    lng: -51.00,
+                    wind: 100
+                },
+                {
+                    lat: 16.90,
+                    lng: -52.30,
+                    wind: 100
+                },
+                {
+                    lat: 16.80,
+                    lng: -53.30,
+                    wind: 105
+                },
+                {
+                    lat: 16.70,
+                    lng: -54.40,
+                    wind: 115
+                },
+                {
+                    lat: 16.70,
+                    lng: -55.60,
+                    wind: 120
+                },
+                {
+                    lat: 16.60,
+                    lng:  -57.00,
+                    wind: 130
+                },
+                {
+                    lat: 16.70,
+                    lng:  -57.00,
+                    wind: 150
+                },
+                {
+                    lat: 16.80,
+                    lng: -58.40,
+                    wind: 155
+                },
+                {
+                    lat: 17.10,
+                    lng: -59.80,
+                    wind: 160
+                },
+                {
+                    lat: 17.40,
+                    lng: -61.10,
+                    wind: 160
+                },
+                {
+                    lat: 17.90,
+                    lng: -62.60,
+                    wind: 160
+                },
+                {
+                    lat: 18.20,
+                    lng: -64.00,
+                    wind: 160
+                },
+                {
+                    lat: 18.80,
+                    lng: -65.40,
+                    wind: 160
+                },
+                {
+                    lat: 19.40,
+                    lng: -66.80,
+                    wind: 160
+                },
+                {
+                    lat: 20.00,
+                    lng:  -68.30,
+                    wind: 155
+                },
+                {
+                    lat: 20.40,
+                    lng:  -69.70,
+                    wind: 150
+                },
+                {
+                    lat: 20.90,
+                    lng:  -71.10,
+                    wind: 150
+                },
+                {
+                    lat: 21.30,
+                    lng:  -72.40,
+                    wind: 145
+                },
+                {
+                    lat: 21.70,
+                    lng:  -73.80,
+                    wind: 135
+                },
+                {
+                    lat: 22.00,
+                    lng:  -75.30,
+                    wind: 130
+                },
+                {
+                    lat: 22.10,
+                    lng:  -76.50,
+                    wind: 135
+                },
+                {
+                    lat: 22.10,
+                    lng:  -77.70,
+                    wind: 140
+                },
+                {
+                    lat: 22.50,
+                    lng:  -78.80,
+                    wind: 135
+                },
+                {
+                    lat: 22.80,
+                    lng:  -79.80,
+                    wind: 110
+                },
+                {
+                    lat: 23.40,
+                    lng:  -80.50,
+                    wind: 110
+                },
+                {
+                    lat: 23.50,
+                    lng:  -81.00,
+                    wind: 105
+                },
+                {
+                    lat: 24.10,
+                    lng:  -81.50,
+                    wind: 115
+                },
+                {
+                    lat: 25.00,
+                    lng:  -81.50,
+                    wind: 115
+                },
+                {
+                    lat: 26.20,
+                    lng:  -81.80,
+                    wind: 95
+                },
+                {
+                    lat: 27.50,
+                    lng:  -81.90,
+                    wind: 85
+                },
+                {
+                    lat: 28.90,
+                    lng:  -82.60,
+                    wind: 65
+                },
+                {
+                    lat: 30.30,
+                    lng:  -83.10,
+                    wind: 55
+                },
+                {
+                    lat: 31.50,
+                    lng:  -84.00,
                     wind: 45
                 },
                 {
-                    lat: 28.20,
-                    lng: -93.20,
-                    wind: 45
-                },
-                {
-                    lat:  28.60,
-                    lng: -93.40,
-                    wind: 45
-                },
-                {
-                    lat: 29.90,
-                    lng: -93.60,
-                    wind: 35
-                },
-                {
-                    lat: 31.00,
-                    lng: -93.50,
-                    wind: 30
-                },
-                {
-                    lat: 31.90,
-                    lng: -93.70,
-                    wind: 20
-                },
-                {
-                    lat: 33.10,
-                    lng: -93.50,
-                    wind: 15
-                },
-                {
-                    lat: 34.50,
-                    lng: -92.00,
-                    wind: 15
-                },
-                {
-                    lat: 36.10,
-                    lng:  -89.60,
+                    lat: 32.40,
+                    lng:  -84.90,
                     wind: 30
                 }
             ]
         },
         {
             storm: 'Jose',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
-            class: 'Tropical Storm',
+            startDate: '09-05-2017',
+            endDate: '09-21-2017',
+            class: 'Hurricane',
             locations: [
                 {
-                    lat: 25.70,
-                    lng: -90.60,
-                    wind: 40
-                },
-                {
-                    lat: 26.40,
-                    lng: -91.00,
-                    wind: 50
-                },
-                {
-                    lat: 27.30,
-                    lng: -91.90,
-                    wind: 50
-                },
-                {
-                    lat: 27.60,
-                    lng:  -92.60,
-                    wind: 45
-                },
-                {
-                    lat: 28.20,
-                    lng: -93.20,
-                    wind: 45
-                },
-                {
-                    lat:  28.60,
-                    lng: -93.40,
-                    wind: 45
-                },
-                {
-                    lat: 29.90,
-                    lng: -93.60,
+                    lat: 12.30,
+                    lng: -39.10,
                     wind: 35
                 },
                 {
+                    lat: 12.50,
+                    lng: -40.60,
+                    wind: 40
+                },
+                {
+                    lat: 12.30,
+                    lng: -41.70,
+                    wind: 45
+                },
+                {
+                    lat: 12.50,
+                    lng:  -42.80,
+                    wind: 50
+                },
+                {
+                    lat: 13.10,
+                    lng: -44.50,
+                    wind: 60
+                },
+                {
+                    lat:  13.90,
+                    lng: -45.80,
+                    wind: 65
+                },
+                {
+                    lat: 14.40,
+                    lng: -47.50,
+                    wind: 75
+                },
+                {
+                    lat: 14.80,
+                    lng: -49.10,
+                    wind: 80
+                },
+                {
+                    lat: 14.90,
+                    lng: -50.60,
+                    wind: 80
+                },
+                {
+                    lat: 15.50,
+                    lng: -52.40,
+                    wind: 105
+                },
+                {
+                    lat: 15.60,
+                    lng: -53.90,
+                    wind: 105
+                },
+                {
+                    lat: 16.00,
+                    lng:  -55.30,
+                    wind: 110
+                },
+                {
+                    lat: 16.30,
+                    lng: -57.10,
+                    wind: 130
+                },
+                {
+                    lat: 16.60,
+                    lng: -58.30,
+                    wind: 130
+                },
+                {
+                    lat: 16.90,
+                    lng: -59.30,
+                    wind: 135
+                },
+                {
+                    lat: 17.50,
+                    lng:  -60.30,
+                    wind: 130
+                },
+                {
+                    lat: 18.30,
+                    lng: -61.30,
+                    wind: 125
+                },
+                {
+                    lat:  19.20,
+                    lng: -62.40,
+                    wind: 125
+                },
+                {
+                    lat: 19.80,
+                    lng: -63.40,
+                    wind: 115
+                },
+                {
+                    lat: 20.80,
+                    lng: -64.50,
+                    wind: 115
+                },
+                {
+                    lat: 21.70,
+                    lng: -65.80,
+                    wind: 115
+                },
+                {
+                    lat: 22.80,
+                    lng: -66.90,
+                    wind: 105
+                },
+                {
+                    lat: 23.70,
+                    lng: -68.10,
+                    wind: 100
+                },
+                {
+                    lat: 24.40,
+                    lng:  -68.60,
+                    wind: 90
+                },
+                {
+                    lat: 25.50,
+                    lng: -69.10,
+                    wind: 90
+                },
+                {
+                    lat: 26.40,
+                    lng: -69.20,
+                    wind: 85
+                },
+                {
+                    lat: 27.10,
+                    lng: -69.50,
+                    wind: 75
+                },
+                {
+                    lat: 27.50,
+                    lng:  -69.00,
+                    wind: 65
+                },
+                {
+                    lat: 27.50,
+                    lng: -68.30,
+                    wind: 65
+                },
+                {
+                    lat: 27.60,
+                    lng: -67.40,
+                    wind: 65
+                },
+                {
+                    lat: 26.50,
+                    lng: -66.40,
+                    wind: 65
+                },
+                {
+                    lat: 26.10,
+                    lng: -66.00,
+                    wind: 65
+                },
+                {
+                    lat: 25.50,
+                    lng: -65.60,
+                    wind: 65
+                },
+                {
+                    lat: 25.30,
+                    lng: -65.60,
+                    wind: 65
+                },
+                {
+                    lat: 25.20,
+                    lng: -66.00,
+                    wind: 70
+                },
+                {
+                    lat: 25.10,
+                    lng:  -66.50,
+                    wind: 65
+                },
+                {
+                    lat: 24.90,
+                    lng: -66.60,
+                    wind: 60
+                },
+                {
+                    lat: 25.20,
+                    lng: -67.30,
+                    wind: 60
+                },
+                {
+                    lat: 25.50,
+                    lng: -68.00,
+                    wind: 60
+                },
+                {
+                    lat: 25.90,
+                    lng:  -68.70,
+                    wind: 60
+                },
+                {
+                    lat: 26.50,
+                    lng: -69.40,
+                    wind: 60
+                },
+                {
+                    lat:  27.10,
+                    lng: -70.30,
+                    wind: 65
+                },
+                {
+                    lat: 27.40,
+                    lng: -71.00,
+                    wind: 70
+                },
+                {
+                    lat: 27.90,
+                    lng: -71.80,
+                    wind: 70
+                },
+                {
+                    lat: 28.80,
+                    lng: -72.20,
+                    wind: 70
+                },
+                {
+                    lat: 28.90,
+                    lng: -71.90,
+                    wind: 70
+                },
+                {
+                    lat: 29.20,
+                    lng: -71.80,
+                    wind: 70
+                },
+                {
+                    lat: 30.00,
+                    lng:  -71.70,
+                    wind: 70
+                },
+                {
                     lat: 31.00,
-                    lng: -93.50,
-                    wind: 30
+                    lng:  -71.90,
+                    wind: 80
                 },
                 {
-                    lat: 31.90,
-                    lng: -93.70,
-                    wind: 20
+                    lat: 31.50,
+                    lng: -71.80,
+                    wind: 80
                 },
                 {
-                    lat: 33.10,
-                    lng: -93.50,
-                    wind: 15
+                    lat: 32.20,
+                    lng: -71.60,
+                    wind: 80
                 },
                 {
-                    lat: 34.50,
-                    lng: -92.00,
-                    wind: 15
+                    lat: 33.00,
+                    lng: -71.40,
+                    wind: 75
                 },
                 {
-                    lat: 36.10,
-                    lng:  -89.60,
-                    wind: 30
+                    lat: 33.90,
+                    lng: -71.10,
+                    wind: 65
+                },
+                {
+                    lat: 34.80,
+                    lng: -71.10,
+                    wind: 65
+                },
+                {
+                    lat: 35.20,
+                    lng: -71.30,
+                    wind: 65
+                },
+                {
+                    lat: 36.00,
+                    lng: -71.30,
+                    wind: 70
+                },
+                {
+                    lat: 36.50,
+                    lng:  -71.70,
+                    wind: 65
+                },
+                {
+                    lat: 37.20,
+                    lng: -71.30,
+                    wind: 65
+                },
+                {
+                    lat: 37.90,
+                    lng: -70.80,
+                    wind: 60
+                },
+                {
+                    lat: 38.40,
+                    lng:  -70.30,
+                    wind: 55
+                },
+                {
+                    lat: 39.00,
+                    lng: -70.00,
+                    wind: 60
+                },
+                {
+                    lat: 39.20,
+                    lng: -69.10,
+                    wind: 60
+                },
+                {
+                    lat: 39.50,
+                    lng:  -68.20,
+                    wind: 50
+                },
+                {
+                    lat: 39.80,
+                    lng: -67.80,
+                    wind: 50
+                },
+                {
+                    lat: 39.60,
+                    lng: -68.20,
+                    wind: 50
+                },
+                {
+                    lat: 39.60,
+                    lng:  -67.90,
+                    wind: 45
                 }
             ]
         },
         {
             storm: 'Katia',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
-            class: 'Tropical Storm',
+            startDate: '09-05-2017',
+            endDate: '09-09-2017',
+            class: 'Hurricane',
             locations: [
                 {
-                    lat: 25.70,
-                    lng: -90.60,
-                    wind: 40
+                    lat: 22.40,
+                    lng: -96.70,
+                    wind: 30
                 },
                 {
-                    lat: 26.40,
-                    lng: -91.00,
-                    wind: 50
+                    lat: 22.20,
+                    lng: -96.40,
+                    wind: 30
                 },
                 {
-                    lat: 27.30,
-                    lng: -91.90,
-                    wind: 50
-                },
-                {
-                    lat: 27.60,
-                    lng:  -92.60,
-                    wind: 45
-                },
-                {
-                    lat: 28.20,
-                    lng: -93.20,
-                    wind: 45
-                },
-                {
-                    lat:  28.60,
-                    lng: -93.40,
-                    wind: 45
-                },
-                {
-                    lat: 29.90,
-                    lng: -93.60,
+                    lat: 22.10,
+                    lng: -96.30,
                     wind: 35
                 },
                 {
-                    lat: 31.00,
-                    lng: -93.50,
-                    wind: 30
+                    lat: 21.70,
+                    lng:  -95.90,
+                    wind: 40
                 },
                 {
-                    lat: 31.90,
-                    lng: -93.70,
-                    wind: 20
+                    lat: 21.70,
+                    lng: -95.10,
+                    wind: 65
                 },
                 {
-                    lat: 33.10,
-                    lng: -93.50,
-                    wind: 15
+                    lat:  21.70,
+                    lng: -94.80,
+                    wind: 70
                 },
                 {
-                    lat: 34.50,
-                    lng: -92.00,
-                    wind: 15
+                    lat: 21.50,
+                    lng: -94.50,
+                    wind: 70
                 },
                 {
-                    lat: 36.10,
-                    lng:  -89.60,
-                    wind: 30
+                    lat: 21.60,
+                    lng: -94.60,
+                    wind: 70
+                },
+                {
+                    lat: 21.60,
+                    lng: -94.60,
+                    wind: 70
+                },
+                {
+                    lat: 21.50,
+                    lng: -95.10,
+                    wind: 75
+                },
+                {
+                    lat: 21.30,
+                    lng: -95.40,
+                    wind: 80
+                },
+                {
+                    lat: 21.00,
+                    lng:  -95.80,
+                    wind: 85
+                },
+                {
+                    lat: 21.00,
+                    lng: -96.50,
+                    wind: 90
+                },
+                {
+                    lat: 20.60,
+                    lng: -97.20,
+                    wind: 65
+                },
+                {
+                    lat: 20.30,
+                    lng:  -97.50,
+                    wind: 35
                 }
             ]
         },
         {
             storm: 'Lee',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
-            class: 'Tropical Storm',
+            startDate: '09-15-2017',
+            endDate: '09-29-2017',
+            class: 'Hurricane',
             locations: [
                 {
-                    lat: 25.70,
-                    lng: -90.60,
-                    wind: 40
+                    lat: 10.70,
+                    lng: -25.40,
+                    wind: 30
                 },
                 {
-                    lat: 26.40,
-                    lng: -91.00,
-                    wind: 50
+                    lat: 10.60,
+                    lng: -27.30,
+                    wind: 30
                 },
                 {
-                    lat: 27.30,
-                    lng: -91.90,
-                    wind: 50
+                    lat: 11.40,
+                    lng: -28.30,
+                    wind: 30
                 },
                 {
-                    lat: 27.60,
-                    lng:  -92.60,
-                    wind: 45
+                    lat: 12.60,
+                    lng:  -29.70,
+                    wind: 30
                 },
                 {
-                    lat: 28.20,
-                    lng: -93.20,
-                    wind: 45
+                    lat: 12.80,
+                    lng: -30.70,
+                    wind: 30
                 },
                 {
-                    lat:  28.60,
-                    lng: -93.40,
-                    wind: 45
+                    lat:  12.60,
+                    lng: -32.10,
+                    wind: 30
                 },
                 {
-                    lat: 29.90,
-                    lng: -93.60,
+                    lat: 12.50,
+                    lng: -33.10,
                     wind: 35
                 },
                 {
-                    lat: 31.00,
-                    lng: -93.50,
+                    lat: 12.60,
+                    lng: -34.20,
+                    wind: 35
+                },
+                {
+                    lat: 12.80,
+                    lng: -34.90,
+                    wind: 35
+                },
+                {
+                    lat: 13.00,
+                    lng: -35.40,
+                    wind: 35
+                },
+                {
+                    lat: 13.00,
+                    lng: -36.70,
                     wind: 30
+                },
+                {
+                    lat: 13.20,
+                    lng:  -37.30,
+                    wind: 30
+                },
+                {
+                    lat: 13.60,
+                    lng: -38.50,
+                    wind: 30
+                },
+                {
+                    lat: 14.10,
+                    lng:  -39.80,
+                    wind: 30
+                },
+                {
+                    lat: 15.00,
+                    lng: -40.60,
+                    wind: 30
+                },
+                {
+                    lat:  15.10,
+                    lng: -43.00,
+                    wind: 25
+                },
+                {
+                    lat: 30.80,
+                    lng: -48.90,
+                    wind: 30
+                },
+                {
+                    lat: 31.50,
+                    lng: -49.00,
+                    wind: 35
                 },
                 {
                     lat: 31.90,
-                    lng: -93.70,
-                    wind: 20
+                    lng: -49.20,
+                    wind: 35
                 },
                 {
-                    lat: 33.10,
-                    lng: -93.50,
-                    wind: 15
+                    lat: 31.90,
+                    lng: -49.40,
+                    wind: 40
                 },
                 {
-                    lat: 34.50,
-                    lng: -92.00,
-                    wind: 15
+                    lat: 32.10,
+                    lng: -49.80,
+                    wind: 40
                 },
                 {
-                    lat: 36.10,
-                    lng:  -89.60,
-                    wind: 30
+                    lat: 31.90,
+                    lng: -50.10,
+                    wind: 45
+                },
+                {
+                    lat: 31.90,
+                    lng:  -50.10,
+                    wind: 65
+                },
+                {
+                    lat: 31.80,
+                    lng: -50.10,
+                    wind: 75
+                },
+                {
+                    lat: 31.40,
+                    lng:  -49.90,
+                    wind: 80
+                },
+                {
+                    lat: 31.30,
+                    lng: -49.70,
+                    wind: 80
+                },
+                {
+                    lat:  31.10,
+                    lng: -49.50,
+                    wind: 80
+                },
+                {
+                    lat:  31.10,
+                    lng: -49.40,
+                    wind: 80
+                },
+                {
+                    lat: 30.80,
+                    lng: -49.00,
+                    wind: 80
+                },
+                {
+                    lat: 30.50,
+                    lng: -50.60,
+                    wind: 75
+                },
+                {
+                    lat: 30.20,
+                    lng: -51.50,
+                    wind: 80
+                },
+                {
+                    lat: 30.00,
+                    lng: -52.50,
+                    wind: 85
+                },
+                {
+                    lat: 29.90,
+                    lng: -53.70,
+                    wind: 90
+                },
+                {
+                    lat: 29.90,
+                    lng: -54.60,
+                    wind: 95
+                },
+                {
+                    lat: 30.00,
+                    lng:  -55.50,
+                    wind: 95
+                },
+                {
+                    lat: 30.20,
+                    lng:  -56.30,
+                    wind: 95
+                },
+                {
+                    lat: 30.60,
+                    lng: -56.80,
+                    wind: 100
+                },
+                {
+                    lat:  31.20,
+                    lng: -57.10,
+                    wind: 100
+                },
+                {
+                    lat:  31.70,
+                    lng: -57.30,
+                    wind: 95
+                },
+                {
+                    lat: 32.50,
+                    lng: -57.20,
+                    wind: 95
+                },
+                {
+                    lat: 33.70,
+                    lng: -57.00,
+                    wind: 85
+                },
+                {
+                    lat: 35.10,
+                    lng: -55.80,
+                    wind: 80
+                },
+                {
+                    lat: 36.30,
+                    lng: -54.60,
+                    wind: 70
+                },
+                {
+                    lat: 38.30,
+                    lng: -52.40,
+                    wind: 65
+                },
+                {
+                    lat: 40.10,
+                    lng: -49.50,
+                    wind: 60
+                },
+                {
+                    lat: 42.20,
+                    lng:  -46.00,
+                    wind: 55
                 }
             ]
         },
         {
             storm: 'Maria',
-            startDate: '06-20-2017',
-            endDate: '06-23-2017',
-            class: 'Tropical Storm',
+            startDate: '09-16-2017',
+            endDate: '09-30-2017',
+            class: 'Hurricane',
             locations: [
                 {
-                    lat: 25.70,
-                    lng: -90.60,
-                    wind: 40
+                    lat: 12.30,
+                    lng: -52.60,
+                    wind: 45
                 },
                 {
-                    lat: 26.40,
-                    lng: -91.00,
+                    lat: 12.50,
+                    lng: -53.70,
+                    wind: 45
+                },
+                {
+                    lat: 13.00,
+                    lng: -54.90,
+                    wind: 55
+                },
+                {
+                    lat: 13.50,
+                    lng:  -56.20,
+                    wind: 55
+                },
+                {
+                    lat: 13.80,
+                    lng: -57.50,
+                    wind: 65
+                },
+                {
+                    lat:  14.20,
+                    lng: -58.40,
+                    wind: 75
+                },
+                {
+                    lat: 14.60,
+                    lng: -59.50,
+                    wind: 80
+                },
+                {
+                    lat: 14.70,
+                    lng: -60.10,
+                    wind: 105
+                },
+                {
+                    lat: 15.10,
+                    lng: -60.70,
+                    wind: 115
+                },
+                {
+                    lat: 15.30,
+                    lng: -61.10,
+                    wind: 140
+                },
+                {
+                    lat: 15.50,
+                    lng: -61.40,
+                    wind: 140
+                },
+                {
+                    lat: 16.00,
+                    lng:  -62.30,
+                    wind: 135
+                },
+                {
+                    lat: 16.30,
+                    lng: -63.10,
+                    wind: 140
+                },
+                {
+                    lat: 16.80,
+                    lng: -64.00,
+                    wind: 145
+                },
+                {
+                    lat: 17.30,
+                    lng: -64.70,
+                    wind: 150
+                },
+                {
+                    lat: 17.90,
+                    lng:  -65.60,
+                    wind: 135
+                },
+                {
+                    lat: 18.40,
+                    lng: -66.50,
+                    wind: 120
+                },
+                {
+                    lat:  18.80,
+                    lng: -67.30,
+                    wind: 95
+                },
+                {
+                    lat: 19.20,
+                    lng: -67.90,
+                    wind: 95
+                },
+                {
+                    lat: 19.60,
+                    lng: -68.40,
+                    wind: 100
+                },
+                {
+                    lat: 20.20,
+                    lng: -69.10,
+                    wind: 100
+                },
+                {
+                    lat: 20.80,
+                    lng: -69.80,
+                    wind: 105
+                },
+                {
+                    lat: 21.00,
+                    lng: -70.20,
+                    wind: 110
+                },
+                {
+                    lat: 21.60,
+                    lng:  -70.60,
+                    wind: 110
+                },
+                {
+                    lat: 22.30,
+                    lng: -71.00,
+                    wind: 110
+                },
+                {
+                    lat: 23.30,
+                    lng: -71.40,
+                    wind: 110
+                },
+                {
+                    lat: 24.10,
+                    lng: -71.70,
+                    wind: 110
+                },
+                {
+                    lat: 24.80,
+                    lng:  -72.00,
+                    wind: 105
+                },
+                {
+                    lat: 25.40,
+                    lng: -72.30,
+                    wind: 100
+                },
+                {
+                    lat:  26.30,
+                    lng: -72.50,
+                    wind: 100
+                },
+                {
+                    lat: 27.00,
+                    lng: -72.50,
+                    wind: 100
+                },
+                {
+                    lat: 27.90,
+                    lng: -72.70,
+                    wind: 95
+                },
+                {
+                    lat: 28.70,
+                    lng: -72.90,
+                    wind: 90
+                },
+                {
+                    lat: 29.40,
+                    lng: -73.00,
+                    wind: 90
+                },
+                {
+                    lat: 30.00,
+                    lng: -73.00,
+                    wind: 80
+                },
+                {
+                    lat: 30.60,
+                    lng:  -73.00,
+                    wind: 70
+                },
+                {
+                    lat: 31.20,
+                    lng: -73.10,
+                    wind: 70
+                },
+                {
+                    lat: 32.30,
+                    lng:  -73.10,
+                    wind: 70
+                },
+                {
+                    lat: 32.90,
+                    lng: -73.10,
+                    wind: 65
+                },
+                {
+                    lat:  33.60,
+                    lng: -73.10,
+                    wind: 65
+                },
+                {
+                    lat: 34.10,
+                    lng: -73.00,
+                    wind: 60
+                },
+                {
+                    lat: 34.90,
+                    lng: -72.90,
+                    wind: 60
+                },
+                {
+                    lat: 35.10,
+                    lng: -72.90,
+                    wind: 60
+                },
+                {
+                    lat: 35.60,
+                    lng: -72.60,
+                    wind: 65
+                },
+                {
+                    lat: 36.20,
+                    lng: -72.10,
+                    wind: 65
+                },
+                {
+                    lat: 36.80,
+                    lng:  -71.50,
+                    wind: 65
+                },
+                {
+                    lat: 36.80,
+                    lng: -71.00,
+                    wind: 60
+                },
+                {
+                    lat: 36.80,
+                    lng:  -69.30,
+                    wind: 60
+                },
+                {
+                    lat: 36.80,
+                    lng: -67.80,
+                    wind: 55
+                },
+                {
+                    lat:  37.10,
+                    lng: -65.50,
+                    wind: 55
+                },
+                {
+                    lat: 37.20,
+                    lng: -63.30,
                     wind: 50
                 },
                 {
-                    lat: 27.30,
-                    lng: -91.90,
+                    lat: 37.50,
+                    lng: -60.10,
                     wind: 50
                 },
                 {
-                    lat: 27.60,
-                    lng:  -92.60,
-                    wind: 45
+                    lat: 37.80,
+                    lng: -57.40,
+                    wind: 50
                 },
                 {
-                    lat: 28.20,
-                    lng: -93.20,
-                    wind: 45
+                    lat: 38.60,
+                    lng: -53.90,
+                    wind: 50
                 },
                 {
-                    lat:  28.60,
-                    lng: -93.40,
-                    wind: 45
+                    lat: 39.60,
+                    lng: -50.50,
+                    wind: 50
                 },
                 {
-                    lat: 29.90,
-                    lng: -93.60,
-                    wind: 35
-                },
-                {
-                    lat: 31.00,
-                    lng: -93.50,
-                    wind: 30
-                },
-                {
-                    lat: 31.90,
-                    lng: -93.70,
-                    wind: 20
-                },
-                {
-                    lat: 33.10,
-                    lng: -93.50,
-                    wind: 15
-                },
-                {
-                    lat: 34.50,
-                    lng: -92.00,
-                    wind: 15
-                },
-                {
-                    lat: 36.10,
-                    lng:  -89.60,
-                    wind: 30
+                    lat: 40.70,
+                    lng:  -47.20,
+                    wind: 50
                 }
             ]
         },
-        //END TO CHANGE
         {
             storm: 'Nate',
             startDate: '10-04-2017',
@@ -1741,13 +2619,6 @@ app.controller('namedStormCtrl', ['$scope', function ($scope) {
 
 }]);
 
-app.controller('mapCtrl', ['$scope', function($scope){
-
-    $scope.apiKey = 'AIzaSyDMFwELhIzYsoRFQbX143HdGA2G4ZKENY4';
-
-}]);
-
-
 app.controller('costsCtrl', ['$scope', function($scope){
 
     $scope.data = [
@@ -1788,9 +2659,8 @@ app.controller('costsCtrl', ['$scope', function($scope){
         { year: 2014, eventNames: [], costs: [0] },
         { year: 2015, eventNames: [], costs: [0] },
         { year: 2016, eventNames: ['Matthew'], costs: [10.4] },
-        { year: 2017, eventNames: ['Harvey', 'Irma', 'Maria'], costs: [0, 0, 0] }
+        { year: '2017*', eventNames: ['Harvey', 'Irma', 'Maria'], costs: [200, 0, 0] }
     ];
-
     $scope.years = [];
     $scope.stormNumber = [];
     $scope.stormCosts = [];
@@ -1812,7 +2682,7 @@ app.controller('costsCtrl', ['$scope', function($scope){
         title: {
             text: 'Billion Dollar Storms By Year'
         },
-        colors: ['#556A73', '#153959'],
+        colors: ['#7C9BA8', '#153959'],
         xAxis: [{
             categories: $scope.years,
             crosshair: true
