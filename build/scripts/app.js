@@ -2774,3 +2774,36 @@ app.controller('costsCtrl', ['$scope', function($scope){
         }]
     });
  }]);
+
+app.controller('namedStormCtrlD3', ['$scope', function ($scope) {
+
+    $scope.namedStormsByYear = [
+        { year: 2008, total: 16, major: 5 },
+        { year: 2009, total: 9, major: 2 },
+        { year: 2010, total: 19, major: 5 },
+        { year: 2011, total: 19, major: 4 },
+        { year: 2012, total: 19, major: 2 },
+        { year: 2013, total: 14, major: 0 },
+        { year: 2014, total: 8, major: 2 },
+        { year: 2015, total: 11, major: 2 },
+        { year: 2016, total: 15, major: 4 },
+        { year: 2017, total: 17, major: 6 }
+    ];
+
+    $scope.years = [];
+    $scope.seriesData = [{
+        name: 'Major Storms',
+        data: [ ]
+    }, {
+        name: 'Total Storms',
+        data: [ ]
+    }];
+
+    angular.forEach($scope.namedStormsByYear, function(value, index){
+        $scope.years.push(value.year);
+        $scope.seriesData[0].data.push(value.major);
+        $scope.seriesData[1].data.push(value.total);
+    });
+
+
+}]);

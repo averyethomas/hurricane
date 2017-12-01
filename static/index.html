@@ -7,6 +7,7 @@
     <!--JAVASCRIPT-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" type="text/javascript"></script>
+    <script src="https://d3js.org/d3.v4.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-resource.min.js?ver=1.0"></script>
     <script src="assets/js/app.js" type="text/javascript"></script>
     <!--FONT AWESOME-->
@@ -34,7 +35,7 @@
         </div>
         <div class="graphic right" data-ng-controller="namedStormCtrl">
           <div class="aside">
-            <div class="graph" id="namedStorms"></div>
+            <div class="graph" id="namedStormsD3"><svg width='100'></svg></div>
           </div>
           <div class="caption">
             <p><i class="fa fa-bar-chart" aria-hidden="true"></i> Total Number of Named Tropical Storms compared to those classified as Major Hurricanes (CAT 3 - 5) | Data: <a href='http://www.nhc.noaa.gov/data' target='_blank'>National Hurricane Center</a>.</p>
