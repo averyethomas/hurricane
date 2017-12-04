@@ -12,24 +12,44 @@
     position: relative;
   }
   &.hero{
-    background: #cecece;
     height: 95vh;
     margin: 0 0 5rem;
-
-    .container{
+    overflow: hidden;
+    position: relative;
+    
+    .video {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-
-      .text{
-        width: 85%;
-        text-align: center;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      
+      iframe {
+        width: 100vw;
+        height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+        min-height: 100vh;
+        min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+    }
+    
+    .text{
+      z-index: 10;
+      width: 85%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-        h1, h2, p{
-          color: $white;
-        }
+      h1, h2, p{
+        color: $white;
       }
     }
   }

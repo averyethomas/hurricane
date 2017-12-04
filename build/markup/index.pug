@@ -14,11 +14,12 @@ html
       script(src="https://use.fontawesome.com/879fcc8444.js")
    body(data-ng-app='angularApp')
       div.section.hero
-         div.container
-            div.text
-               h1 A HEADLINE ABOUT A TOPIC
-               h2 A subheadline that further expands on the topic just a little bit.
-               p Avery Thomas
+         div.video
+            iframe(src="https://player.vimeo.com/video/245532681?background=1&autoplay=1&loop=1&volume=0" frameborder="0" height="580" width="1040" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+         div.text
+            h1 A HEADLINE ABOUT A TOPIC
+            h2 A subheadline that further expands on the topic just a little bit.
+            p Avery Thomas | December 1, 2017
       div.section.content
          div.container
             h3 INTRO
@@ -29,7 +30,7 @@ html
                   p <i class="fa fa-globe" aria-hidden="true"></i> Mapped Paths of the 2017 Named Tropical Storms in the Atlantic Basin | DATA: <a href='http://weather.unisys.com/hurricane/atlantic/2017/index.php' target='_blank'>Unisys Weather</a>
             div.graphic.right(data-ng-controller='namedStormCtrl')
                div.aside
-                  div.graph#namedStormsD3
+                  div.graph#namedStorms
                      <svg width='100'></svg>
                div.caption
                   p <i class="fa fa-bar-chart" aria-hidden="true"></i> Total Number of Named Tropical Storms compared to those classified as Major Hurricanes (CAT 3 - 5) | Data: <a href='http://www.nhc.noaa.gov/data' target='_blank'>National Hurricane Center</a>.
@@ -51,8 +52,8 @@ html
                   img(src='assets/images/harvey-humans-disaster.jpg')
                div.caption
                   p <i class="fa fa-camera" aria-hidden="true"></i> Flooded homes are shown near Lake Houston following Hurricane Harvey August 30, 2017 in Houston. | Image: <a href='http://time.com/4923381/hurricane-harvey-human-disaster/' target='_blank'>TIME</a>
-         p In addition to the devastating wind damage and storm surge in cities and towns along the coast, Harvey stalled over the area bringing historic amounts of rain to the nation's fourth most populous metropolitan area, Houston. In a ranking of the Top 50 wettest days seen at the Houston Hobby Airport, the top four all occurred during Hurricane Harvey, August 24 - 30 2017.
-         p The Harris County Flood Control District estimated that 70% of the county was covered in at least 1.5 feet of water after four days of historic rain fall.
+            p In addition to the devastating wind damage and storm surge in cities and towns along the coast, Harvey stalled over the area bringing historic amounts of rain to the nation's fourth most populous metropolitan area, Houston. In a ranking of the Top 50 wettest days seen at the Houston Hobby Airport, the top four all occurred during Hurricane Harvey, August 24 - 30 2017.
+            p The Harris County Flood Control District estimated that 70% of the county was covered in at least 1.5 feet of water after four days of historic rain fall.
       div.section.content
          div.container
             h3 Hurricane Irma
