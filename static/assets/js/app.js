@@ -2807,3 +2807,68 @@ app.controller('namedStormCtrlD3', ['$scope', function ($scope) {
 
 
 }]);
+
+app.controller('texasRainfall', ['$scope', function($scope){
+
+     var data = [
+        [ 'us-tx-167', 56.00 ],
+        [ 'us-tx-201', 54.00 ],
+        [ 'us-tx-039', 50.04 ],
+        [ 'us-tx-291', 49.31 ],
+        [ 'us-tx-071', 42.00 ],
+        [ 'us-tx-157', 39.17 ],
+        [ 'us-tx-473', 37.23 ],
+        [ 'us-tx-339', 31.22 ],
+        [ 'us-tx-477', 30.58 ],
+        [ 'us-tx-407', 29.82 ],
+        [ 'us-tx-471', 26.20 ],
+        [ 'us-tx-089', 25.91 ],
+        [ 'us-tx-015', 24.66 ],
+        [ 'us-tx-373', 23.75 ],
+        [ 'us-tx-185', 21.87 ],
+        [ 'us-tx-481', 20.47 ],
+        [ 'us-tx-041', 19.98 ],
+        [ 'us-tx-321', 18.26 ],
+        [ 'us-tx-051', 16.23 ],
+        [ 'us-tx-455', 15.18 ],
+        [ 'us-tx-313', 14.36 ],
+        [ 'us-tx-239', 11.51 ],
+        [ 'us-tx-225', 7.96 ]
+    ];
+
+    Highcharts.mapChart('texasCounty', {
+        chart: {
+            map: 'countries/us/us-tx-all'
+        },
+
+        title: {
+            text: 'Highmaps basic demo'
+        },
+
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: {
+                verticalAlign: 'bottom'
+            }
+        },
+
+        colorAxis: {
+            min: 0,
+            maxColor: '#153959'
+        },
+
+        series: [{
+            data: data,
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: '#556A73'
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }]
+    });
+}]);
