@@ -2838,11 +2838,16 @@ app.controller('texasRainfall', ['$scope', function($scope){
 
     Highcharts.mapChart('texasCounty', {
         chart: {
-            map: 'countries/us/us-tx-all'
+            map: 'countries/us/us-tx-all',
+            events: {
+                load: function () {
+                    this.mapZoom(0.35, -500, -500, -1500, 475);
+                }
+            }
         },
 
         title: {
-            text: 'Highmaps basic demo'
+            text: 'East Texas Rainfall During Hurricane Harvey'
         },
 
         mapNavigation: {
@@ -2857,9 +2862,24 @@ app.controller('texasRainfall', ['$scope', function($scope){
             maxColor: '#153959'
         },
 
+        tooltip: {
+            shadow: false,
+            useHTML: true,
+            padding: 10,
+            pointFormat: '<span class="f32"><span class="flag {point.flag}">' +
+            '</span></span> {point.name} County<br>' +
+            '<span>{point.value} in.</span>',
+
+        },
+
+        legend: {
+            verticalAlign: 'top',
+            y: 25
+        },
+
         series: [{
             data: data,
-            name: 'Random data',
+            name: 'Rainfall',
             states: {
                 hover: {
                     color: '#556A73'
