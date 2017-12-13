@@ -186,6 +186,9 @@ a {
       .section.content .graphic .full {
         width: 100%;
         display: block; }
+        .section.content .graphic .full img {
+          display: block;
+          width: 100%; }
         .section.content .graphic .full#stormMap {
           height: 500px; }
       .section.content .graphic .aside img {
