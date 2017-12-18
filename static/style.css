@@ -72,6 +72,8 @@ h1 {
 
 h2 {
   font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
   font-weight: 500;
   margin: 0 0 1.5rem; }
@@ -104,7 +106,7 @@ h6 {
   margin: 0 auto 1rem; }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 2rem;
   max-width: 675px;
